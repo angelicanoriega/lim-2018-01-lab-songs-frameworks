@@ -1,14 +1,13 @@
 {
-  "main.css": "/lim-2018-01-lab-songs-frameworks/static/css/main.8e2dfdd6.chunk.css",
-  "main.js": "/lim-2018-01-lab-songs-frameworks/static/js/main.0a04647e.chunk.js",
-  "main.js.map": "/lim-2018-01-lab-songs-frameworks/static/js/main.0a04647e.chunk.js.map",
-  "static/js/1.6105a37c.chunk.js": "/lim-2018-01-lab-songs-frameworks/static/js/1.6105a37c.chunk.js",
-  "static/js/1.6105a37c.chunk.js.map": "/lim-2018-01-lab-songs-frameworks/static/js/1.6105a37c.chunk.js.map",
+  "main.css": "/lim-2018-01-lab-songs-frameworks/static/css/main.883d206b.chunk.css",
+  "main.js": "/lim-2018-01-lab-songs-frameworks/static/js/main.5c96caee.chunk.js",
+  "main.js.map": "/lim-2018-01-lab-songs-frameworks/static/js/main.5c96caee.chunk.js.map",
+  "static/js/1.ad4591f8.chunk.js": "/lim-2018-01-lab-songs-frameworks/static/js/1.ad4591f8.chunk.js",
+  "static/js/1.ad4591f8.chunk.js.map": "/lim-2018-01-lab-songs-frameworks/static/js/1.ad4591f8.chunk.js.map",
   "runtime~main.js": "/lim-2018-01-lab-songs-frameworks/static/js/runtime~main.45d975ff.js",
   "runtime~main.js.map": "/lim-2018-01-lab-songs-frameworks/static/js/runtime~main.45d975ff.js.map",
-  "static/media/logo.svg": "/lim-2018-01-lab-songs-frameworks/static/media/logo.5d5d9eef.svg",
-  "static/css/main.8e2dfdd6.chunk.css.map": "/lim-2018-01-lab-songs-frameworks/static/css/main.8e2dfdd6.chunk.css.map",
+  "static/css/main.883d206b.chunk.css.map": "/lim-2018-01-lab-songs-frameworks/static/css/main.883d206b.chunk.css.map",
   "index.html": "/lim-2018-01-lab-songs-frameworks/index.html",
-  "precache-manifest.3ebb1d9d2c41c4da0e27764d1654f9b4.js": "/lim-2018-01-lab-songs-frameworks/precache-manifest.3ebb1d9d2c41c4da0e27764d1654f9b4.js",
+  "precache-manifest.0d6f147ed771f4b8f7968936e50e69ef.js": "/lim-2018-01-lab-songs-frameworks/precache-manifest.0d6f147ed771f4b8f7968936e50e69ef.js",
   "service-worker.js": "/lim-2018-01-lab-songs-frameworks/service-worker.js"
 }
