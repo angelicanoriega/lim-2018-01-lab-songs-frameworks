@@ -25,12 +25,6 @@ class App extends Component {
               maxLength:search.length
             })    
           
-            // fetch(`https://ws.audioscrobbler.com/2.0/?method=album.search&album=${this.state.name}&api_key=${this.apiKey}&limit=10&format=json`).then(res => res.json())
-            // .then(o => {console.log(this.state);
-            //   console.log(o);
-              
-            // })
-            // .catch(e => console.log(e))
         })
       .catch(e => console.log(e))
       
@@ -75,9 +69,7 @@ class App extends Component {
     }
     
   } 
-  render() {
-    console.log(this.state);
-    
+  render() {    
     const todos = 
     <div className="row">
       <div className="col-md-12 text-center p-5">
@@ -97,9 +89,8 @@ class App extends Component {
         </div>
       </div>
       <div className="col-md-12">
-      
       <Counter
-      nameArtist={this.state}
+      nameArtist={this.state.name}
       />
       </div>
     </div>
@@ -107,7 +98,7 @@ class App extends Component {
     return (
     <div className="App">
       <nav className="navbar navbar-dark  ">
-        <a href="#" className="navbar-brand fas fa-music" >
+        <a href=".App" className="navbar-brand fas fa-music" >
           <span className="pl-3" >Music</span> </a>  
       </nav>
       <div className="container mt-5 p-5">
