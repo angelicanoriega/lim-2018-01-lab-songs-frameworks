@@ -1,43 +1,38 @@
 import React, { Component } from 'react';
 
-class Counter extends Component {
+class Contador extends Component {
     constructor(props) {
         super(props);
-        this.apiKey = '5a1efd24e5a648c36e20f365271a017a';
         this.state = {
             counter: 0,
-            song:'NOMBRE DE la cancion'
+            song:''
         }
-        this.like = this.like.bind(this);
-        this.dislike = this.dislike.bind(this);
-
     }
-    componentDidUpdate() {
-        console.log(this.props);
-
-    const artis= this.props.nameArtist
-        fetch(`https://ws.audioscrobbler.com/2.0/?method=album.search&album=${artis}&api_key=${this.apiKey}&limit=10&format=json`).then(res => res.json())
-        .then(o => {
-        this.state.song=o.results.albummatches.album[0].name
-        })
-        .catch(e => console.log(e))
+    like=(name)=>{
+        console.log(name);
         
-    }
-    like() {
         this.setState({
             counter: this.state.counter + 1
         });
     }
-    dislike() {
+    dislike=(name)=>{
+        console.log(name);
+
         if (this.state.counter > 0) {
             this.setState({
                 counter: this.state.counter - 1
             })
         };
     }
-    render() {
-    console.log(this.state.song);
+    componentDidUpdate(){
+        console.log(this.props.search);
+        // this.state.song=nameSong;
         
+
+    }
+    render() {
+        console.log(Object.keys(this.state), this.state.counter);
+        // console.log(this.state.song);   
         return (
             <div className='row pt-2 text-center border'>
                  <div className="col-12 col-md-6 ">
@@ -55,5 +50,6 @@ class Counter extends Component {
             </div>
         )
     }
+        
 }
-export default Counter
+export default Contador
