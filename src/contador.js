@@ -3,23 +3,18 @@ import React, { Component } from 'react';
 
 class Contador extends Component {
     constructor(props) {
-
         super(props);
         this.state = {
             counter: 0,
             song:''
         }
     }
-    like=(name)=>{
-        console.log(name);
-        
+    like=()=>{        
         this.setState({
             counter: this.state.counter + 1
         });
     }
-    dislike=(name)=>{
-        console.log(name);
-
+    dislike=()=>{
         if (this.state.counter > 0) {
             this.setState({
                 counter: this.state.counter - 1
@@ -27,7 +22,6 @@ class Contador extends Component {
         };
     }
     render() {
-        console.log(this.props.song);
         return (
             <div className='row pt-2 text-center border'>
                  <div className="col-12 col-md-6 ">

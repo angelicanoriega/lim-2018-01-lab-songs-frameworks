@@ -119,13 +119,10 @@ class App extends Component {
                 />
             )}
           </div>
-         : (<p>cargando</p>)}
+         : (<p>cargando ...</p>)}
       </div>
   </div>
     );
   }
 }
-  // <Counter
-  //       song={this.state.song}
-  //       /> 
 export default App;
