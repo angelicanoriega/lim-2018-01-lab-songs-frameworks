@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/lim-2018-01-lab-songs-frameworks/precache-manifest.c0349d07327f6ca6f7b42860875d399e.js"
+  "/lim-2018-01-lab-songs-frameworks/precache-manifest.726ac3b419f5977aff866dcc6659eb18.js"
 );
 
 workbox.clientsClaim();
