@@ -17,12 +17,13 @@ class App extends Component {
         const search = resp.topartists.artist;
         fetch(`https://ws.audioscrobbler.com/2.0/?method=album.search&album=${search[0].name}&api_key=${this.apiKey}&limit=10&format=json`).then(res => res.json())
         .then(song => {
+          const list=song.results.albummatches.album.map(list=>{return list.name})
           this.setState({
             name: search[0].name,
             img: search[0].image[3]["#text"],
             search: search,
             maxLength: search.length,
-            song:song.results.albummatches.album
+            song:list
           })
         })
         .catch(e => console.log(e))
@@ -35,58 +36,60 @@ class App extends Component {
         const more = 0;
         fetch(`https://ws.audioscrobbler.com/2.0/?method=album.search&album=${this.state.search[more].name}&api_key=${this.apiKey}&limit=10&format=json`).then(res => res.json())
           .then(song => {
+            const list=song.results.albummatches.album.map(list=>{return list.name})
             this.setState({
               counter: more,
               img: this.state.search[more].image[3]["#text"],
               name: this.state.search[more].name,
-              song: song.results.albummatches.album
+              song: list
             });
           })
       } else {
         const more = this.state.counter + 1;
         fetch(`https://ws.audioscrobbler.com/2.0/?method=album.search&album=${this.state.search[more].name}&api_key=${this.apiKey}&limit=10&format=json`).then(res => res.json())
           .then(song => {
+            const list=song.results.albummatches.album.map(list=>{return list.name})
             this.setState({
               counter: more,
               img: this.state.search[more].image[3]["#text"],
               name: this.state.search[more].name,
-              song: song.results.albummatches.album
+              song: list
             });
           })
       }
   }
   after = () => {
-    console.log(this.state);
-
     if (this.state.counter === 0) {
       const more = this.state.maxLength - 1;
       fetch(`https://ws.audioscrobbler.com/2.0/?method=album.search&album=${this.state.search[more].name}&api_key=${this.apiKey}&limit=10&format=json`).then(res => res.json())
       .then(song => {
+        const list=song.results.albummatches.album.map(list=>{return list.name})
         this.setState({
           counter: more,
           img: this.state.search[more].image[3]["#text"],
           name: this.state.search[more].name,
-          song: song.results.albummatches.album
+          song: list
         });
       })
     } else {
       const more = this.state.counter - 1;
       fetch(`https://ws.audioscrobbler.com/2.0/?method=album.search&album=${this.state.search[more].name}&api_key=${this.apiKey}&limit=10&format=json`).then(res => res.json())
           .then(song => {
+            const list=song.results.albummatches.album.map(list=>{return list.name})
             this.setState({
               counter: more,
               img: this.state.search[more].image[3]["#text"],
               name: this.state.search[more].name,
-              song: song.results.albummatches.album
+              song: list
             });
           })
     }
 
 
   }
-  render() {    
+  render() {   
     console.log(this.state.song);
-
+     
   return (
   <div className="row">
       <div className="col-md-12 text-center p-5">
@@ -106,9 +109,9 @@ class App extends Component {
           </div>
       </div>
       <div className="col-md-12">
-          <Counter
-          search={this.state.song}
-          />
+        {<Counter
+        song={this.state.song}
+        />}  
       </div>
   </div>
     );

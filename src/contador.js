@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 
+
 class Contador extends Component {
     constructor(props) {
+
         super(props);
+        console.log(props);
+        
         this.state = {
             counter: 0,
             song:''
@@ -24,22 +28,15 @@ class Contador extends Component {
             })
         };
     }
-    componentDidUpdate(){
-        console.log(this.props.search);
-        // this.state.song=nameSong;
-        
-
-    }
     render() {
-        console.log(Object.keys(this.state), this.state.counter);
-        // console.log(this.state.song);   
+        console.log(this.props.song);
         return (
             <div className='row pt-2 text-center border'>
                  <div className="col-12 col-md-6 ">
-                    <p>{this.state.song}</p>
+                    <p>{this.props.song}</p>
                 </div>
                 <div className="col-12 col-md-2 ">
-                    <span>{this.state.counter}</span>
+                    <p>{this.state.counter}</p>
                 </div>
                 <div className="col-6 col-md-2 ">
                     <i className="fas fa-thumbs-up" onClick={this.like}></i>
