@@ -118,8 +118,8 @@ class App extends Component {
                 song={list}
                 />
             )}
-          </div>
-         : (<p>cargando ...</p>)}
+          </div> 
+         : (<div className="loader">Loading...</div>)}
       </div>
   </div>
     );
