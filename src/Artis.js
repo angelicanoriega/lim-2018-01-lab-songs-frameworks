@@ -8,6 +8,7 @@ class App extends Component {
     this.state = {
       counter: 0,
       maxLength: null,
+      song:[]
     }
     this.apiKey = '5a1efd24e5a648c36e20f365271a017a';
   }
@@ -109,13 +110,22 @@ class App extends Component {
           </div>
       </div>
       <div className="col-md-12">
-        {<Counter
-        song={this.state.song}
-        />}  
+      {this.state.song.length ? 
+          <div>
+            {this.state.song.map((list,i) =>
+              <Counter
+                key={i}
+                song={list}
+                />
+            )}
+          </div>
+         : (<p>cargando</p>)}
       </div>
   </div>
     );
   }
 }
-
+  // <Counter
+  //       song={this.state.song}
+  //       /> 
 export default App;

@@ -5,8 +5,6 @@ class Contador extends Component {
     constructor(props) {
 
         super(props);
-        console.log(props);
-        
         this.state = {
             counter: 0,
             song:''
